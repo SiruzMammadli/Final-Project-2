@@ -13,3 +13,35 @@ openMenuBtn.addEventListener('click', () => {
 closeMenuBtn.addEventListener('click', () => {
     mobileNav.classList.toggle('on');
 });
+
+// RESPONSIVE NAVBAR MENU LIST
+
+let lists = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu li');
+let chevronBtn = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu li a span');
+let subMenu = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu li .sub-menu');
+
+// for (let i = 0; i < lists.length; i++) {
+//     lists[i].addEventListener('click', function() {
+        
+//         if(!this.classList.contains('show')) {
+//             this.classList.add('show');
+
+//             let menu = subMenu[i];
+//             menu.style.height = 'auto';
+            
+//             let height = menu.clientHeight + 'px';
+            
+//             menu.style.height = '0px';
+
+//             setTimeout(() => {
+//                 menu.style.height = height
+//             },0)
+//         } else {
+//             menu.style.height = '0px';
+
+//             menu.addEventListener('transitionend', () => {
+//                 lists[i].classList.remove('show');
+//             });
+//         }
+//     });
+// }

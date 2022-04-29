@@ -1,0 +1,109 @@
+.page-head {
+    background: url('https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2021/12/REJ93.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    min-height: 325px;
+    text-transform: capitalize;
+
+    .page-head-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 325px;
+
+        .title {
+            color: var(--dark-blue-clr);
+            font-size: 46px;
+            font-weight: 500;
+        }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 15px;
+
+            a:hover ~ .current {
+                color: var(--grey-clr);
+            }
+
+            a {
+                color: var(--grey-clr);
+                transition: .4s ease;
+
+                &:hover {
+                    color: var(--green-clr);
+                }
+            }
+            .slash {
+                color: var(--grey-clr);
+                cursor: default;
+            }
+            .current {
+                color: var(--green-clr);
+                cursor: default;
+                transition: .4s ease;
+            }
+        }
+    }
+}
+
+.main {
+    padding: 100px 0;
+    background-color: var(--white-clr);
+
+    .filter-box {
+        padding: 30px 30px 15px;
+        margin-bottom: 30px;
+        border: 1px solid #d7d7d7;
+        border-radius: 5px;
+
+        .filter-title {
+            color: var(--dark-blue-clr);
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .checks {
+            .filter-content {
+                label {
+                    font-size: 15px;
+                    color: var(--grey-clr);
+                    transition: .4s ease;
+                    cursor: pointer;
+                    margin-bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:hover {
+                        color: var(--green-clr);
+                    }
+
+                    input[type="checkbox"] {
+                        position: relative;
+                        width: 15px; height: 15px;
+                        background-color: var(--white-clr);
+                        border: 1px solid #ddd;
+                        border-radius: 2px;
+                        appearance: none;
+                        cursor: pointer;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 6px; height: 6px;
+                            background-color: var(--white-clr);
+                            border-radius: 1px;
+                        }
+
+                        &:checked {
+                            background-color: var(--green-clr);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

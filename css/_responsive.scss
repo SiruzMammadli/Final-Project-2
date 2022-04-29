@@ -61,7 +61,7 @@
 
         // MOBILE NAVBAR
         .mobile-nav-container {
-            display: block;
+            display: block !important;
 
             &.on {
                 .mobile-nav {
@@ -153,9 +153,72 @@
                     }
                 }
 
-                .m-logo {
+                .m-logo-img {
+                    display: block !important;
                     img {
                         height: 50px;
+                    }
+                }
+
+                .resp-nav {
+                    display: block !important;
+
+                    .resp-nav-menu {
+                        margin-top: 30px;
+                        font-size: 15px;
+                        
+                        li {
+                            font-weight: 500;
+                            position: relative;
+                            a {
+                                display: block;
+                                padding: 8px 0;
+                                color: var(--white-clr);
+
+                                &.active {
+                                    color: var(--green-clr);
+                                }
+                            }
+                            
+
+                            span {
+                                position: absolute;
+                                top: 0; right: 0;
+                                width: 35px; height: 35px;
+                                background-color: rgba(255,255,255, 0.05);
+                                text-align: center;
+                                cursor: pointer;
+                                
+                                i {
+                                    line-height: 35px;
+                                    font-size: 24px;
+                                    opacity: .4;
+                                    transition: .4s ease;
+                                }
+                            }
+
+                            &.show {
+                                span {
+                                    i {
+                                        transform: rotate(90deg) translate(-1px, 1px);
+                                    }
+                                }
+
+                                .sub-menu {
+                                    height: auto;
+                                    transition: .4s ease;
+                                }
+                            }
+
+                            .sub-menu {
+                                position: relative;
+                                font-size: 14px;
+                                padding-left: 20px;
+                                max-height: 0px;
+                                overflow: hidden;
+                                transition: all .4s ease;
+                            }
+                        }
                     }
                 }
             }

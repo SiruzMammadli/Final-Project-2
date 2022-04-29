@@ -1,6 +1,8 @@
 // FONT
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;900&display=swap');
 
+// IMPORT PAGES
+@import '_filter_side_left';
 
 :root {
     --white-clr: #FFFFFF;
@@ -26,6 +28,7 @@ body {
 
 ul {
     margin: 0;
+    // list-style: none;
 }
 
 
@@ -274,11 +277,6 @@ ul {
                 }
             }
         }
-    }
-
-    // MOBILE NAVBAR
-    .mobile-navbar-container {
-        display: none;
     }
 }
 
