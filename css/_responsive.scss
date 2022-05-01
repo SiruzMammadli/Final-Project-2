@@ -1,5 +1,4 @@
 
-
 @media (max-width: 1200px) {
     // HEADER
     .header {
@@ -224,4 +223,62 @@
             }
         }
     }
+}
+
+@media (max-width: 992px) {
+    // FILTER SIDE LEFT
+
+        // PAGE HEAD SECTION
+    .page-head {
+        .title {
+            font-size: 32px !important;
+        }
+    }
+
+        // MAIN SECTION
+    .main {
+        .filter-box {
+            padding: 20px 15px 15px 15px;
+        }
+
+        .course-top {
+            flex-wrap: wrap;
+            .course-order {
+                width: 100%;
+                padding: 5px 0;
+                .select-area {
+                    width: 100%;
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+            
+            .course-search {
+                max-width: 100%;
+                width: 100%;
+                padding: 5px 0;
+            }
+        }
+    }
+    // END OF FILTER SIDE LEFT
+}
+
+@media (max-width: 576px) {
+    // FILTER SIDE LEFT
+    .main {
+        .filter-box {
+            max-width: 100% !important;
+        }
+
+        .courses-wrap {
+            .list-media {
+                margin-bottom: 10px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    // END OF FILTER SIDE LEFT
 }

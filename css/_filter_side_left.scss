@@ -65,7 +65,8 @@
             margin-bottom: 15px;
         }
         .wrap {
-            overflow: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
             max-height: 300px;
 
             &::-webkit-scrollbar {
@@ -191,10 +192,6 @@
                     padding: 0 20px 0 10px;
                     appearance: none;
                     border-radius: 5px;
-
-                    option {
-
-                    }
                 }
             }
         }
@@ -243,6 +240,18 @@
     .courses-wrap {
         #list1 {
             padding: 0 15px;
+
+            .course-list {
+                margin-bottom: 40px;
+                padding-top: 40px;
+                border-top: 1px solid #ebebeb;
+
+                &.first-child {
+                    padding-top: 0;
+                    border: none;
+                }
+            }
+
             .list-media {
                 img {
                     height: 200px;
@@ -329,6 +338,34 @@
                     font-size: 15px;
                     line-height: 28px;
                 }
+            }
+        }
+    }
+
+    .nav-links {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .page-number {
+            display: block;
+            min-width: 35px; height: 35px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50%;
+            background-color: var(--white-clr);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--grey-clr);
+
+            &.current {
+                background-color: var(--green-clr);
+                color: var(--white-clr);
+            }
+
+            i {
+                font-size: 20px;
+                line-height: 35px;
             }
         }
     }
