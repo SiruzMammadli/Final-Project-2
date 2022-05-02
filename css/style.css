@@ -921,7 +921,7 @@ ul {
     z-index: 444;
     position: fixed;
     top: 0;
-    left: -60%;
+    left: -100%;
     width: 400px;
     height: 100%;
     white-space: nowrap;
@@ -984,19 +984,19 @@ ul {
     margin-top: 30px;
     font-size: 15px;
   }
-  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu li {
+  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu .drop-menu-li {
     font-weight: 500;
     position: relative;
   }
-  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu li a {
+  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu .drop-menu-li a {
     display: block;
     padding: 8px 0;
     color: var(--white-clr);
   }
-  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu li a.active {
+  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu .drop-menu-li a.active {
     color: var(--green-clr);
   }
-  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu li span {
+  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu .drop-menu-li span {
     position: absolute;
     top: 0;
     right: 0;
@@ -1006,30 +1006,25 @@ ul {
     text-align: center;
     cursor: pointer;
   }
-  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu li span i {
+  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu .drop-menu-li span i {
     line-height: 35px;
     font-size: 24px;
     opacity: .4;
     -webkit-transition: .4s ease;
     transition: .4s ease;
   }
-  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu li.show span i {
+  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu .drop-menu-li.show span i {
     -webkit-transform: rotate(90deg) translate(-1px, 1px);
             transform: rotate(90deg) translate(-1px, 1px);
   }
-  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu li.show .sub-menu {
-    height: auto;
-    -webkit-transition: .4s ease;
-    transition: .4s ease;
-  }
-  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu li .sub-menu {
+  .header .mobile-nav-container .mobile-nav .resp-nav .resp-nav-menu .drop-menu-li .sub-menu {
     position: relative;
     font-size: 14px;
     padding-left: 20px;
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease;
+    -webkit-transition: max-height .4s ease;
+    transition: max-height .4s ease;
   }
 }
 

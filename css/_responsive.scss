@@ -108,7 +108,7 @@
                 color: var(--white-clr);
                 z-index: 444;
                 position: fixed;
-                top: 0; left: -60%;
+                top: 0; left: -100%;
                 width: 400px; height: 100%;
                 white-space: nowrap;
                 padding: 30px;
@@ -166,7 +166,7 @@
                         margin-top: 30px;
                         font-size: 15px;
                         
-                        li {
+                        .drop-menu-li {
                             font-weight: 500;
                             position: relative;
                             a {
@@ -204,8 +204,7 @@
                                 }
 
                                 .sub-menu {
-                                    height: auto;
-                                    transition: .4s ease;
+                                    // height: auto;
                                 }
                             }
 
@@ -213,9 +212,9 @@
                                 position: relative;
                                 font-size: 14px;
                                 padding-left: 20px;
-                                max-height: 0px;
+                                max-height: 0;
                                 overflow: hidden;
-                                transition: all .4s ease;
+                                transition: max-height .4s ease;
                             }
                         }
                     }
