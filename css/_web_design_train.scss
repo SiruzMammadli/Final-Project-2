@@ -1,0 +1,89 @@
+.web-design-head {
+    background: url('https://thepixelcurve.com/wp/lmsmart/lp/wp-content/uploads/sites/2/2022/01/TOIP036.jpeg') no-repeat;
+    padding: 90px 0;
+
+    .head-content {
+        width: 1270px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        .content-left {
+            width: 70%;
+            color: var(--dark-blue-clr);
+
+            .content-score-stars {
+                display: flex;
+                align-items: center;
+                column-gap: 2px;
+                padding-bottom: 12px;
+
+                i {
+                    color: var(--yellow-clr);
+                    transform: translateY(-2px);
+                }
+
+                .score-value {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .web-head-content-title {
+                font-size: 36px;
+                font-weight: 500;
+                margin-bottom: 25px;
+            }
+
+            .web-head-content-post {
+                p {
+                    font-size: 18px;
+                    color: var(--grey-clr);
+                    margin-bottom: 20px;
+                    width: 83%;
+                }
+
+                .post-author {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 50px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    
+                    .post-avatar {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 15px;
+
+                        .avatar {
+                            max-width: 42px;
+                            border-radius: 50%;
+                        }
+
+                        .author-name {
+                            color: var(--dark-blue-clr);
+                        }
+                    }
+
+                    .post-update {
+                        position: relative;
+
+                        span {
+                            font-weight: 400;
+                            color: var(--green-clr);
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 1px; height: 30px;
+                            background-color: var(--dark-blue-clr);
+                            top: 50%; left: -25px;
+                            transform: translateY(-50%);
+                            opacity: .2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
