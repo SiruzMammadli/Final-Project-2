@@ -22,7 +22,7 @@ itemNavLink.forEach( items => {
     items.addEventListener('click', evnt => {
 
         let subMenu = items.querySelector('.sub-menu');
-        let currentList = document.querySelector('.header .mobile-nav-container .resp-nav-menu .drop-menu-li.show')
+        // let currentList = document.querySelector('.header .mobile-nav-container .resp-nav-menu .drop-menu-li.show')
         
         items.classList.toggle('show');
         

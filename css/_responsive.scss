@@ -1,3 +1,46 @@
+@media (max-width: 1370px) {
+// WEB DESIGN TRAINING
+    // HEAD SECTION
+    .web-design-head {
+        .head-content {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (max-width: 1224px) {
+    // WEB DESIGN TRAINING
+        // HEAD SECTION
+        .web-design-head {
+            .head-content {
+                .content-left {
+                    width: 100% !important;
+
+                    .web-head-content-post {
+                        .post-author {
+                            display: block;
+                            .post-avatar {
+                                img {
+                                    transform: translateY(4px);
+                                }
+                                a {
+                                    transform: translateY(-10px);
+                                }
+                            }
+                            .post-update {
+                                margin-left: 58px;
+                                transform: translateY(-15px);
+                                &::before {
+                                    content: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
 @media (max-width: 1200px) {
     // HEADER
