@@ -148,6 +148,14 @@
 
         .entry-tab-body {
             .tab-content {
+
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                // OVERVIEW CONTENT
                 &.overview {
                     padding-top: 56px;
 
@@ -187,6 +195,122 @@
                         }
                     }
                 }
+
+                // CURRICULUM CONTENT
+                &.curriculum {
+                    padding-top: 56px;
+
+                    .curriculum-lists {
+                        
+                        .list {
+                            margin-bottom: 35px;
+                            border: 1px solid #ebebeb;
+                            width: 100%;
+
+                            &.closed {
+                                .list-head {
+                                    .i-toggle {
+                                        i {
+                                            transform: rotate(180deg) translate(50%, 50%);
+                                        }
+                                    }
+                                }
+                                
+                                .content-lists {
+                                    display: none;
+                                }
+                            }
+
+                            .list-head {
+                                padding: 15px 15px 15px 35px;
+                                width: 100%;
+                                background-color: var(--white-clr);
+                                display: flex;
+                                align-items: center;
+
+                                h5 {
+                                    font-size: 17px;
+                                    font-weight: 700;
+                                    line-height: 30px;
+                                    margin-bottom: 0;
+                                    color: var(--dark-blue-clr);
+                                    flex: 1;
+                                    cursor: default;
+                                }
+
+                                .i-toggle {
+                                    display: block;
+                                    position: relative;
+                                    cursor: pointer;
+                                    width: 40px;
+
+                                    i {
+                                        position: absolute;
+                                        top: 50%; left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+
+                            .content-lists {
+                                margin-bottom: -1px;
+                                .list-content {
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 10px 0px 10px 30px;
+                                    position: relative;
+                                    font-size: 14px;
+
+                                    &:nth-child(odd) {
+                                        background-color: #f8f8f8;
+                                    }
+
+                                    a {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        column-gap: 6px;
+                                        width: calc(100% - 28px);
+                                        color: #777;
+                                        position: relative;
+
+                                        &:hover {
+                                            .item-name {
+                                                color: var(--green-clr);
+                                            }
+                                        }
+                                        
+                                        i {
+                                            font-size: 17px;
+                                        }
+                                        .item-name {
+                                            display: block;
+                                            font-size: 15px;
+                                            line-height: 32px;
+                                            transition: .4s ease;
+                                        }
+                                        .item-meta {
+                                            position: absolute;
+                                            display: block;
+                                            top: 50%; right: 0;
+                                            transform: translateY(-50%);
+
+                                            &.green {
+                                                background-color: var(--green-clr);
+                                                border-radius: 3px;
+                                                padding: 0 8px;
+                                                color: var(--white-clr);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // INSTRUCTOR CONTENT
                 &.instructor {
                     padding-top: 60px;
                     .instructor-course-author {
