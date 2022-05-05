@@ -1,41 +1,39 @@
 // RESPONSIVE NAVBAR CLICK FUNCTION
 
-// const openMenuBtn = document.querySelector('.header .wrapper .respons .hamburger-box');
-// const closeMenuBtn = document.querySelector('.header .mobile-nav-container .mobile-nav .menu-close');
-// let mobileNav = document.querySelector('.header .mobile-nav-container');
-// let hamburgerIcon = document.querySelector('.header .mobile-nav-container .mobile-nav .menu-close .hamburger-icon')
+let openMenuBtn = document.querySelector('.header .wrapper .respons .hamburger-box');
+let closeMenuBtn = document.querySelector('.header .mobile-nav-container .mobile-nav .menu-close');
+let mobileNav = document.querySelector('.header .mobile-nav-container');
+let hamburgerIcon = document.querySelector('.header .mobile-nav-container .mobile-nav .menu-close .hamburger-icon')
 
-// openMenuBtn.addEventListener('click', () => {
-//     mobileNav.classList.add('on');
-//     hamburgerIcon.classList.add('active');
-// });
+function openMenu() {
+    mobileNav.classList.add('on');
+    hamburgerIcon.classList.add('active');
+}
 
-// closeMenuBtn.addEventListener('click', () => {
-//     mobileNav.classList.toggle('on');
-// });
+function closeMenu() {
+    mobileNav.classList.toggle('on');
+}
 
 // RESPONSIVE NAVBAR MENU LIST
 
-let itemNavLink = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu .drop-menu-li');
+let dropLink = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu .drop-menu-li');
+let subMenu = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu .drop-menu-li .sub-menu');
 
-itemNavLink.forEach( items => {
-    items.addEventListener('click', evnt => {
+// itemNavLink.forEach((items, frstIndex) => {
+//     items.addEventListener('click', () => {
 
-        let subMenu = items.querySelector('.sub-menu');
-        // let currentList = document.querySelector('.header .mobile-nav-container .resp-nav-menu .drop-menu-li.show')
+//         let subMenu = items.querySelector('.sub-menu');
+
+//         items.classList.toggle('show');
         
-        items.classList.toggle('show');
+//         if(items.classList.contains('show')) {
+//             subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+//         } else {
+//             subMenu.style.maxHeight = 0;
+//         }
         
-        if(items.classList.contains('show')) {
-            
-            
-            subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
-        } else {
-            subMenu.style.maxHeight = 0;
-        }
-        
-    });
-});
+//     });
+// });
 
 
 
