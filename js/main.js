@@ -19,7 +19,7 @@ function closeMenu() {
 let dropLink = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu .drop-menu-li');
 let subMenu = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu .drop-menu-li .sub-menu');
 
-// itemNavLink.forEach((items, frstIndex) => {
+// dropLink.forEach((items, frstIndex) => {
 //     items.addEventListener('click', () => {
 
 //         let subMenu = items.querySelector('.sub-menu');
