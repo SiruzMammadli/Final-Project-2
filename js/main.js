@@ -16,26 +16,29 @@ function closeMenu() {
 
 // RESPONSIVE NAVBAR MENU LIST
 
-let dropLink = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu .drop-menu-li');
-let subMenu = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu .drop-menu-li .sub-menu');
+let accordion = function() {
+    let dropLinks = document.querySelectorAll('.header .mobile-nav-container .resp-nav-menu .drop-menu-li');
 
-// dropLink.forEach((items, frstIndex) => {
-//     items.addEventListener('click', () => {
+    let clickCall = function() {
 
-//         let subMenu = items.querySelector('.sub-menu');
+        // Click olunan liste show classi elave etmek ucun
+        this.classList.toggle('show');
 
-//         items.classList.toggle('show');
-        
-//         if(items.classList.contains('show')) {
-//             subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
-//         } else {
-//             subMenu.style.maxHeight = 0;
-//         }
-        
-//     });
-// });
+        for (let i = 0; i < dropLinks.length; i++) {
 
+            //listde show classina sahil olan varsa ve bu click olunan list deyilse class adini silmek ucun
+            if (dropLinks[i].classList.contains('show') && dropLinks[i] != this) {
+                dropLinks[i].classList.remove('show');
+            }
+        }
+    }
+    
+    for ( let i = 0; i < dropLinks.length; i++) {
+        dropLinks[i].addEventListener('click', clickCall);
+    }
+}
 
+accordion();
 
 
 // WEB DESIGN TRAINING PAGE
@@ -63,6 +66,7 @@ tabBtns.forEach(
             tabContents.forEach(
                 function(contentSelf, contentIndex) {
             
+                    // title button ile content ID leri eyni deyilse active classini silmek ucun
                     if(contentIndex == listIndex) {
                         contentSelf.classList.add('active')
                     } else {
@@ -85,10 +89,10 @@ let curriculumBtns = document.querySelectorAll('.entry-tab-body .curriculum .lis
 
 curriculumBtns.forEach(btn => {
     btn.addEventListener('click', function() {
-        // CurriculumList in parentini elde etmek
+        // CurriculumList in parentini elde etmek ucun
         list = btn.parentNode
 
-        // Eger list closed classina sahib deyilse elave et sahibdirse sil
+        // Eger list closed classina sahib deyilse elave et sahibdirse silmek ucun
         if(!list.classList.contains('closed')) {
             list.classList.add('closed');
         } else {

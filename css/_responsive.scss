@@ -264,7 +264,7 @@
                                 }
 
                                 .sub-menu {
-                                    // height: auto;
+                                    max-height: 333px;
                                 }
                             }
 
@@ -274,7 +274,7 @@
                                 padding-left: 20px;
                                 max-height: 0;
                                 overflow: hidden;
-                                transition: max-height .4s ease;
+                                transition: .7s max-height;
                             }
                         }
                     }
