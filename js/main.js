@@ -1,17 +1,43 @@
+// HEADER HIDE/SHOW ON SCROLL
+
+function headerScroll() {
+    if (window.innerWidth > 1200) {
+        let header = document.querySelector('.header'),
+            headerHeight = header.clientHeight,
+            curScrollHeight = 0;
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset;
+
+            if (scrollTop > curScrollHeight && window.scrollY > 85) {
+                header.style.top = -headerHeight + 'px';
+            } else {
+                header.style.top = '0';
+            }
+            curScrollHeight = scrollTop;
+        })
+    }
+}
+
+headerScroll();
+
 // RESPONSIVE NAVBAR CLICK FUNCTION
 
-let openMenuBtn = document.querySelector('.header .wrapper .respons .hamburger-box');
-let closeMenuBtn = document.querySelector('.header .mobile-nav-container .mobile-nav .menu-close');
-let mobileNav = document.querySelector('.header .mobile-nav-container');
-let hamburgerIcon = document.querySelector('.header .mobile-nav-container .mobile-nav .menu-close .hamburger-icon')
+let openMenuBtn = document.querySelector('.header .wrapper .respons .hamburger-box'),
+    closeMenuBtn = document.querySelector('.header .mobile-nav-container .mobile-nav .menu-close'),
+    mobileNav = document.querySelector('.header .mobile-nav-container'),
+    hamburgerIcon = document.querySelector('.header .mobile-nav-container .mobile-nav .menu-close .hamburger-icon'),
+    body = document.querySelector('body');
 
 function openMenu() {
     mobileNav.classList.add('on');
     hamburgerIcon.classList.add('active');
+    body.classList.add('no-scroll');
 }
 
 function closeMenu() {
     mobileNav.classList.toggle('on');
+    body.classList.toggle('no-scroll')
 }
 
 // RESPONSIVE NAVBAR MENU LIST
@@ -45,8 +71,8 @@ accordion();
 
 // TAB MENU
 
-let tabBtns = document.querySelectorAll('.entry-content .entry-content-left .entry-tab-head .tab-menu li');
-let tabContents = document.querySelectorAll('.entry-content .entry-content-left .entry-tab-body .tab-content');
+let tabBtns = document.querySelectorAll('.entry-content .entry-content-left .entry-tab-head .tab-menu li'),
+    tabContents = document.querySelectorAll('.entry-content .entry-content-left .entry-tab-body .tab-content');
 
 tabBtns.forEach(
     function(listSelf, listIndex) {
@@ -84,8 +110,8 @@ tabBtns.forEach(
 
 // CURRICULUM LISTS
 
-let curriculumList = document.querySelectorAll('.entry-tab-body .curriculum .list');
-let curriculumBtns = document.querySelectorAll('.entry-tab-body .curriculum .list .list-head');
+let curriculumList = document.querySelectorAll('.entry-tab-body .curriculum .list'),
+    curriculumBtns = document.querySelectorAll('.entry-tab-body .curriculum .list .list-head');
 
 curriculumBtns.forEach(btn => {
     btn.addEventListener('click', function() {

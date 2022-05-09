@@ -25,6 +25,7 @@
 
 body {
     // background-color: #F6F7F9;
+    margin-top: 85px;
 }
 
 ul {
@@ -36,10 +37,13 @@ ul {
 // HEADER
 
 .header {
+    position: fixed;
+    top: 0; left: 0;
     text-transform: capitalize;
     background-color: var(--white-clr);
     width: 100%; height: 85px;
     z-index: 333;
+    transition: .4s ease;
 
     .wrapper {
         line-height: 85px;
